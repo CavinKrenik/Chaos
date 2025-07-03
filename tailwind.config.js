@@ -1,11 +1,12 @@
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+// tailwind.config.js
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        dark: "#0B0E1A",
-        neonBlue: "#00FFF7",
-        neonPink: "#FF3CAC",
+        neonBlue: '#00ffff',
+        neonPink: '#ff00ff',
+        dark: '#0a0a0a',
       },
     },
   },
