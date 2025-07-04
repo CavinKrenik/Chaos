@@ -13,9 +13,10 @@ module.exports = {
       },
       animation: {
         pulseSlow: 'pulse 10s infinite',
+        spinSlow: 'spin 10s linear infinite', // 👈 Add this line
       },
       backgroundImage: {
-        stars: "url('/stars-bg.png')", // Replace with your own asset path if needed
+        stars: "url('/stars-bg.png')",
       },
     },
   },
