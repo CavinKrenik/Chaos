@@ -10,7 +10,7 @@ import CallToAction from './components/CallToAction';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark text-white font-sans">
+      <div className="min-h-screen bg-black text-white font-sans">
         <header className="bg-black/80 backdrop-blur sticky top-0 z-50 shadow-md">
           <nav className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <h1 className="text-2xl font-bold text-neonBlue">chaostocode</h1>

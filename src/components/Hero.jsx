@@ -1,23 +1,28 @@
-// src/components/Hero.jsx
-import logo from '../assets/logoc2c.png';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="text-center py-20 px-4 bg-black/60">
-      <img src={logo} alt="Chaos To Code Logo" className="mx-auto h-24 mb-6 drop-shadow-lg" />
-      <h1 className="text-4xl md:text-5xl font-bold text-neonBlue mb-4">
-        Master AI by Doing
+    <section className="text-center py-24">
+      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-neonBlue mb-6">
+        Welcome to Chaos to Code
       </h1>
-      <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-        Welcome to <span className="text-neonPink font-semibold">Chaos To Code</span> — where you turn confusion into clarity through interactive prompt engineering.
+      <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        Master AI prompt engineering and build creative superpowers — from chaos, we code.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#explorer" className="px-6 py-3 bg-neonBlue text-black rounded font-semibold hover:opacity-90 transition">
-          Explore Prompts
-        </a>
-        <a href="/prompt-lab" className="px-6 py-3 bg-neonPink text-black rounded font-semibold hover:opacity-90 transition">
-          Test a Prompt
-        </a>
+      <div className="flex justify-center gap-6">
+        <Link
+          to="/prompt-lab"
+          className="bg-neonPink hover:bg-pink-500 text-white font-semibold py-3 px-6 rounded-xl transition"
+        >
+          Enter Prompt Lab
+        </Link>
+        <Link
+          to="/prompt-gallery"
+          className="border border-neonPink text-neonPink hover:bg-neonPink hover:text-black font-semibold py-3 px-6 rounded-xl transition"
+        >
+          Explore Gallery
+        </Link>
       </div>
     </section>
   );
