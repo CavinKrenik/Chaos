@@ -1,14 +1,12 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import PromptExplorer from '../components/PromptExplorer';
-import CallToAction from '../components/CallToAction';
+import HomeHero from '../components/HomeHero';
+import ContactCTA from '../components/ContactCTA';
 
 export default function Home() {
   return (
     <div className="space-y-24">
-      <Hero />
-      <PromptExplorer />
-      <CallToAction />
+      <HomeHero />
+      <ContactCTA />
     </div>
   );
 }
