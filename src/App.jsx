@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import PromptLab from './pages/PromptLab';
 import PromptGallery from './pages/PromptGallery';
+import Hero from './components/Hero';
+import PromptExplorer from './components/PromptExplorer';
+import CallToAction from './components/CallToAction';
 
 export default function App() {
   return (
