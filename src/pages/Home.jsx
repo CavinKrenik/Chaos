@@ -1,9 +1,13 @@
-// src/pages/Home.jsx
+import Hero from '../components/Hero';
+import PromptExplorer from '../components/PromptExplorer';
+import CallToAction from '../components/CallToAction';
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-center">
-      <h2 className="text-4xl font-bold mb-4 text-white">Welcome to chaostocode.com</h2>
-      <p className="text-lg text-neonBlue">A galaxy of interactive AI learning awaits.</p>
+    <div>
+      <Hero />
+      <PromptExplorer />
+      <CallToAction />
     </div>
   );
 }
