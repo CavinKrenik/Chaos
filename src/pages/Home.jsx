@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeHero from '../components/HomeHero';
-import ContactCTA from '../components/ContactCTA';
+import ContactCTA from '../components/ContactCTA.jsx';
 
 export default function Home() {
   return (
