@@ -10,6 +10,24 @@ export default function Portfolio() {
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+          <h3 className="text-neonPink text-xl font-semibold mb-2">Seed Sync — Role Assignment Tool</h3>
+          <p className="text-gray-300 mb-2">Assign Human Design roles to team members in a conscious community. Built with React, Flask, and SQLite.</p>
+          <div className="flex justify-center gap-4">
+            <a href="https://glowing-sunflower-d8af4c.netlify.app/" target="_blank" className="text-neonBlue underline hover:text-white">Live Site</a>
+            <a href="https://github.com/CavinKrenik/SEEDTEAM" target="_blank" className="text-neonBlue underline hover:text-white">GitHub Repo</a>
+          </div>
+        </div>
+
+        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+          <h3 className="text-neonPink text-xl font-semibold mb-2">Seed Plants — Garden Tracker</h3>
+          <p className="text-gray-300 mb-2">Track garden progress with plant care info, photos, and admin tools. Built using React and Flask.</p>
+          <div className="flex justify-center gap-4">
+            <a href="https://seedplants.netlify.app/" target="_blank" className="text-neonBlue underline hover:text-white">Live Site</a>
+            <a href="https://github.com/CavinKrenik/SEED_PLANTS" target="_blank" className="text-neonBlue underline hover:text-white">GitHub Repo</a>
+          </div>
+        </div>
+
+        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">Custom Web App</h3>
           <p className="text-gray-300 mb-2">A React-powered AI prompt trainer with animations, routing, and live editing tools.</p>
           <a href="#" className="text-neonBlue underline hover:text-white">View Project →</a>
