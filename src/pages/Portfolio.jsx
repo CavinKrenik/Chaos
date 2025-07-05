@@ -29,8 +29,8 @@ export default function Portfolio() {
 
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">Custom Web App</h3>
-          <p className="text-gray-300 mb-2">A React-powered AI prompt trainer with animations, routing, and live editing tools.</p>
-          <a href="#" className="text-neonBlue underline hover:text-white">View Project →</a>
+          <p className="text-gray-300 mb-2">A React-powered AI Tool Library</p>
+          <a href="https://subtle-flan-dd1ced.netlify.app/" className="text-neonBlue underline hover:text-white">View Project →</a>
         </div>
 
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
