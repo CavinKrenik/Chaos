@@ -18,6 +18,17 @@ export default function Portfolio() {
           </div>
         </div>
 
+         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+          <h3 className="text-neonPink text-xl font-semibold mb-2">RecovrSocial — Clean & Sober Social App</h3>
+          <p className="text-gray-300 mb-2">
+            A mobile-first web app for people in recovery to connect, share clean dates, and discover sober events. Built with React Native and Expo.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="http://recovrsocial.com" target="_blank" className="text-neonBlue underline hover:text-white">Live Site</a>
+            <a href="https://github.com/CavinKrenik/RecovrSocial" target="_blank" className="text-neonBlue underline hover:text-white">GitHub Repo</a>
+          </div>
+        </div>
+
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">Seed Plants — Garden Tracker</h3>
           <p className="text-gray-300 mb-2">Track garden progress with plant care info, photos, and admin tools. Built using React and Flask.</p>
