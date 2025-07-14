@@ -72,8 +72,8 @@ export default function Portfolio() {
 
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">Business Website</h3>
-          <p className="text-gray-300 mb-2">A fast-loading marketing site for a small business — mobile-optimized and SEO ready.</p>
-          <a href="#" className="text-neonBlue underline hover:text-white">View Project →</a>
+          <p className="text-gray-300 mb-2">A fast-loading re-build of small business website — mobile-optimized and SEO ready.</p>
+          <a href="https://relax-therapy-wellness.deploypad.app/" className="text-neonBlue underline hover:text-white">View Project →</a>
         </div>
 
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
