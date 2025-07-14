@@ -42,6 +42,19 @@ export default function Portfolio() {
           </div>
         </div>
 
+                <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+          <h3 className="text-neonPink text-xl font-semibold mb-2">The Seed Studio — Online Store & Admin Panel</h3>
+          <p className="text-gray-300 mb-2">
+            A fully functional e-commerce platform with an integrated admin dashboard for managing products, inventory, and orders.
+            Includes responsive design, secure routing, and streamlined user experience. Built with modern web technologies.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="https://theseedstudio.store/" target="_blank" className="text-neonBlue underline hover:text-white">Live Site</a>
+            <a href="https://github.com/CavinKrenik/TheSeedStore" target="_blank" className="text-neonBlue underline hover:text-white">GitHub Repo</a>
+          </div>
+        </div>
+
+
         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">Seed Plants — Garden Tracker</h3>
           <p className="text-gray-300 mb-2">Track garden progress with plant care info, photos, and admin tools. Built using React and Flask.</p>
