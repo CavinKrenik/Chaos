@@ -18,7 +18,20 @@ export default function Portfolio() {
           </div>
         </div>
 
-         <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
+          <h3 className="text-neonPink text-xl font-semibold mb-2">QRES — Quantum-Relational Encoding System</h3>
+          <p className="text-gray-300 mb-2">
+            A prototype for a novel data encoding model that uses relational states between bits instead of traditional base-N counting.
+            QRES demonstrates high-efficiency compression with chunked data reconstruction and full decompression validation.
+            Built using Python and Rust.
+          </p>
+          <div className="flex justify-center">
+            <a href="https://github.com/CavinKrenik/QRES" target="_blank" className="text-neonBlue underline hover:text-white">GitHub Repo</a>
+          </div>
+        </div>
+
+
+        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
           <h3 className="text-neonPink text-xl font-semibold mb-2">RecovrSocial — Clean & Sober Social App</h3>
           <p className="text-gray-300 mb-2">
             A mobile-first web app for people in recovery to connect, share clean dates, and discover sober events. Built with React Native and Expo.
