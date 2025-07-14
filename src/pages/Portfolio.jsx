@@ -76,18 +76,7 @@ export default function Portfolio() {
           <a href="https://relax-therapy-wellness.deploypad.app/" className="text-neonBlue underline hover:text-white">View Project →</a>
         </div>
 
-        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
-          <h3 className="text-neonPink text-xl font-semibold mb-2">Brand Identity Kit</h3>
-          <p className="text-gray-300 mb-2">Visual design for logos, social banners, and branded assets with consistent theming.</p>
-          <a href="#" className="text-neonBlue underline hover:text-white">View Project →</a>
-        </div>
-
-        <div className="bg-black/50 p-6 rounded-lg shadow-md border border-neonBlue hover:scale-105 transition-transform">
-          <h3 className="text-neonPink text-xl font-semibold mb-2">E-commerce UI</h3>
-          <p className="text-gray-300 mb-2">Modern frontend layout for an online shop with dark theme, Tailwind CSS, and responsive flow.</p>
-          <a href="#" className="text-neonBlue underline hover:text-white">View Project →</a>
         </div>
       </div>
-    </div>
   );
 }
