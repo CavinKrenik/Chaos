@@ -2,22 +2,22 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
-import About from './pages/About';
+import Bio from './pages/Bio';
 import Contact from './pages/Contact';
 
 export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-dark text-white font-sans">
-        <header className="bg-black/80 backdrop-blur sticky top-0 z-50 shadow-md">
-          <nav className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-neonBlue">chaostocode</h1>
+        <header className="bg-black/30 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
+          <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-neonBlue drop-shadow-[0_0_5px_rgba(0,255,255,0.6)]">chaostocode</h1>
             <ul className="flex space-x-6">
-              <li><Link to="/" className="hover:text-neonPink">Home</Link></li>
-              <li><Link to="/portfolio" className="hover:text-neonPink">Portfolio</Link></li>
-              <li><Link to="/services" className="hover:text-neonPink">Services</Link></li>
-              <li><Link to="/about" className="hover:text-neonPink">About</Link></li>
-              <li><Link to="/contact" className="hover:text-neonPink">Contact</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-neonPink transition-all duration-300 hover:drop-shadow-[0_0_5px_#ff00ff]">Home</Link></li>
+              <li><Link to="/portfolio" className="text-gray-300 hover:text-neonPink transition-all duration-300 hover:drop-shadow-[0_0_5px_#ff00ff]">Portfolio</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-neonPink transition-all duration-300 hover:drop-shadow-[0_0_5px_#ff00ff]">Services</Link></li>
+              <li><Link to="/bio" className="text-gray-300 hover:text-neonPink transition-all duration-300 hover:drop-shadow-[0_0_5px_#ff00ff]">Bio</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-neonPink transition-all duration-300 hover:drop-shadow-[0_0_5px_#ff00ff]">Contact</Link></li>
             </ul>
           </nav>
         </header>
@@ -29,7 +29,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/bio" element={<Bio />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>

@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-neonBlue: #00FFFF;
+  --color-neonPink: #FF00FF;
+  --color-dark: #000000;
+  
+  --animate-pulseSlow: pulse 10s infinite;
+  --animate-spinSlow: spin 10s linear infinite;
+  
+  --image-stars: url('/stars-bg.png');
+}
 
 @layer base {
   body {
@@ -10,24 +20,8 @@
 
 @layer utilities {
   .bg-stars {
-    background-image: url('/stars-bg.png'); /* Make sure this file exists in /public or update the path */
+    background-image: url('/stars-bg.png');
     background-size: cover;
     background-repeat: repeat;
-  }
-
-  .bg-dark {
-    background-color: #000000;
-  }
-
-  .text-neonBlue {
-    color: #00FFFF;
-  }
-
-  .text-neonPink {
-    color: #FF00FF;
-  }
-
-  .hover\:text-neonPink:hover {
-    color: #FF00FF;
   }
 }
