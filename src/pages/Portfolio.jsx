@@ -3,6 +3,15 @@ import React from 'react';
 
 const PROJECTS = [
   {
+    id: 'restinplace',
+    title: 'Rest In Place',
+    description: 'A photography project and digital gallery exploring the quiet collision between human memory and the natural world, capturing the slow process of monuments being returned to the earth.',
+    tech: ['React', 'Photography', 'Netlify'],
+    live: 'https://moonlit-custard-23ab7f.netlify.app/',
+    repo: 'https://github.com/CavinKrenik/RESTINPLACE',
+    featured: false,
+  },
+  {
     id: 'dataghost',
     title: 'DataGhost',
     description: 'The simplest, most transparent way to disappear from data brokers. We blast 70+ opt-out requests and CC you on every single email. No account. No subscription. No dashboard. No bullshit.',
