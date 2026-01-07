@@ -1,5 +1,5 @@
-// src/pages/Bio.jsx
 import React from 'react';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 
 const SKILLS = [
     {
@@ -34,14 +34,79 @@ const SKILLS = [
     },
 ];
 
+function SkillCard({ category, items, color, delay }) {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        mouseX.set(clientX - left);
+        mouseY.set(clientY - top);
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: delay, duration: 0.5 }}
+            className="group relative rounded-xl bg-black/40 border border-white/10 overflow-hidden"
+            onMouseMove={handleMouseMove}
+        >
+            {/* Spotlight Gradient */}
+            <motion.div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100 rounded-xl z-10"
+                style={{
+                    background: useMotionTemplate`
+            radial-gradient(
+              350px circle at ${mouseX}px ${mouseY}px,
+              rgba(255, 255, 255, 0.1), 
+              transparent 80%
+            )
+          `,
+                }}
+            />
+
+            <div className="relative z-20 p-8 h-full flex flex-col">
+                {/* Header with decorative line */}
+                <div className="flex items-center justify-between mb-6">
+                    <h3 className={`text-xl font-bold ${color} drop-shadow-sm group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all`}>
+                        {category}
+                    </h3>
+                    {/* Tech deco elements */}
+                    <div className="flex gap-1">
+                        <div className={`w-1 h-1 rounded-full ${color === 'text-neonBlue' ? 'bg-neonBlue' : 'bg-neonPink'}`}></div>
+                        <div className="w-1 h-1 rounded-full bg-white/20"></div>
+                        <div className="w-1 h-1 rounded-full bg-white/20"></div>
+                    </div>
+                </div>
+
+                <ul className="space-y-3 flex-1">
+                    {items.map((item, i) => (
+                        <li key={i} className="flex items-center gap-3 text-gray-400 group-hover:text-gray-100 transition-colors text-sm font-mono">
+                            <span className={`w-1 h-1 rounded-full ${color === 'text-neonBlue' ? 'bg-neonBlue' : 'bg-neonPink'} shadow-[0_0_5px_currentColor]`}></span>
+                            {item}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </motion.div>
+    );
+}
+
 export default function Bio() {
     return (
         <section className="max-w-7xl mx-auto py-20 px-6">
             {/* Hero Bio Card */}
-            <div className="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-10 md:p-14 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-16 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold text-neonBlue mb-8 text-center drop-shadow-[0_0_10px_rgba(0,255,255,0.4)]">Bio</h1>
+            <div className="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-10 md:p-14 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-16 max-w-4xl mx-auto relative overflow-hidden">
 
-                <div className="space-y-6 text-lg text-gray-200 leading-relaxed text-center md:text-left">
+                {/* Decorative background glow for Bio Card */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-neonBlue/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
+                <h1 className="text-4xl md:text-5xl font-bold text-neonBlue mb-8 text-center drop-shadow-[0_0_10px_rgba(0,255,255,0.4)] relative z-10">
+                    BIO
+                </h1>
+
+                <div className="space-y-6 text-lg text-gray-200 leading-relaxed text-center md:text-left relative z-10">
                     <p>
                         I turn chaos into clean, usable systems—web apps, tools, and digital experiences that feel sharp and intentional.
                         I’m a former commercial fisherman who rebuilt my life through education, art, and code.
@@ -76,24 +141,9 @@ export default function Bio() {
                 <div className="w-24 h-1 bg-gradient-to-r from-neonBlue to-neonPink mx-auto rounded-full"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {SKILLS.map((skillGroup, idx) => (
-                    <div
-                        key={idx}
-                        className="group bg-black/40 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neonPink/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,0,255,0.15)]"
-                    >
-                        <h3 className={`text-xl font-bold mb-6 ${skillGroup.color} drop-shadow-sm group-hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all`}>
-                            {skillGroup.category}
-                        </h3>
-                        <ul className="space-y-3">
-                            {skillGroup.items.map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 text-gray-300 group-hover:text-white transition-colors">
-                                    <span className={`w-1.5 h-1.5 rounded-full ${skillGroup.color === 'text-neonBlue' ? 'bg-neonBlue' : 'bg-neonPink'} shadow-[0_0_5px_currentColor]`}></span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <SkillCard key={idx} {...skillGroup} delay={idx * 0.1} />
                 ))}
             </div>
         </section>

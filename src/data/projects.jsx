@@ -69,18 +69,18 @@ export const PROJECTS = [
         id: 'qres',
         title: 'QRES: Quantum-Relational Encoding System',
         description: 'A neural, deterministic compression engine for the IoT and Edge Computing era, leveraging SNNs and a federated P2P architecture.',
-        tech: ['Rust', 'Python', 'WebAssembly', 'SNNs', 'P2P'],
+        tech: ['Rust', 'Python', 'WebAssembly', 'SNNs', 'P2P', 'No_Std'],
         live: null,
         repo: 'https://github.com/CavinKrenik/QRES',
         type: 'featured',
-        featured: true, // Promoted to featured since it's a showcase project
+        featured: true,
         details: (
             <div className="space-y-16 text-left">
-                {/* Hero Section */}
+                {/* 1. Hero / Abstract */}
                 <section>
-                    <h3 className="text-3xl font-bold text-neonBlue mb-6">Neural, Deterministic Compression</h3>
+                    <h3 className="text-3xl font-bold text-neonBlue mb-6">The "Singularity Engine"</h3>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                        QRES is a compression framework built for structured time-series data, leveraging Spiking Neural Networks (SNNs) and a federated P2P architecture to learn data patterns. Unlike general-purpose compressors (like Zstd or Gzip), QRES allows nodes to share "compression intelligence" (models) without sharing raw data, ideal for bandwidth-constrained IoT swarms.
+                        QRES is a paradigm shift from "Storage" to "Intelligence." It acts as a neural memory cortex, storing only anomalies while predicting norms. By leveraging Spiking Neural Networks (SNNs) and a federated P2P architecture, it allows IoT swarms to share "compression intelligence" without ever sharing raw data.
                     </p>
                     <div className="flex flex-wrap gap-4 text-sm font-mono text-neonPink">
                         <span className="bg-white/5 px-3 py-1 rounded border border-white/10">v10.5 (Hybrid Era)</span>
@@ -89,58 +89,58 @@ export const PROJECTS = [
                     </div>
                 </section>
 
-                {/* Quickstart */}
-                <section className="bg-white/5 p-8 rounded-xl border border-white/10">
-                    <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                        <span>🚀</span> Quickstart
-                    </h3>
-                    <div className="space-y-6">
-                        <div>
-                            <p className="text-gray-400 mb-2 text-sm">1. Install Python Package</p>
-                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
-                                {`git clone https://github.com/CavinKrenik/QRES.git
-cd QRES
-pip install .
-
-# Compress a file
-python3 -c "import qres; print(f'Compressed size: {len(qres.compress(open(\"README.md\", \"rb\").read()))} bytes')"`}
-                            </div>
-                        </div>
-                        <div>
-                            <p className="text-gray-400 mb-2 text-sm">2. Build the Daemon (Rust)</p>
-                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
-                                {`cd qres_rust
-cargo build --release --bin qres_daemon
-./target/release/qres_daemon start`}
-                            </div>
-                        </div>
+                {/* 2. The Problem & Solution */}
+                <section className="grid md:grid-cols-2 gap-8">
+                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
+                        <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
+                            <span className="text-2xl">⚠️</span> The Problem: Data Obesity
+                        </h4>
+                        <p className="text-gray-400 leading-relaxed">
+                            The world generates 400 exabytes of data daily. We transmit the same repetitive signals (sine waves, sensor streams) billions of times, wasting energy and hindering efficient AI adaptation.
+                        </p>
+                    </div>
+                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
+                        <h4 className="text-xl font-bold text-neonBlue mb-4 flex items-center gap-2">
+                            <span className="text-2xl">🧬</span> The Solution: Bio-Mimetic
+                        </h4>
+                        <p className="text-gray-400 leading-relaxed">
+                            QRES mimics synaptic plasticity. For a robot's sensor feed or a heartbeat monitor, it learns the structure dynamically, storing only the "surprise" (entropy) and predicting the rest.
+                        </p>
                     </div>
                 </section>
 
-                {/* Features Grid */}
+                {/* 3. Technical Deep Dive */}
                 <section>
-                    <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">Core Features</h3>
+                    <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">Under the Hood</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Neural Prediction Engine</strong>
-                            <p className="text-gray-400 leading-relaxed">Utilizes SNNs to predict and compress repetitive data streams (telemetry, logs) more efficiently than static dictionaries.</p>
+                            <strong className="block text-neonBlue text-lg mb-2">Fixed-Point Determinism</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Built on <strong>Q16.16 fixed-point arithmetic</strong>. This guarantees bit-perfect reproducibility across x86, ARM, RISC-V, and WASM targets, preventing "Butterfly Effect" drift in neural weights.
+                            </p>
                         </div>
                         <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Deterministic Architecture</strong>
-                            <p className="text-gray-400 leading-relaxed">Built on Q16.16 fixed-point arithmetic, ensuring bit-perfect reproducibility across x86, ARM, RISC-V, and WASM targets.</p>
+                            <strong className="block text-neonBlue text-lg mb-2">The "Living Brain"</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                An autonomous background daemon that manages an ensemble of predictors (Linear, Spectral, SNNs). It optimizes the codec's weights without blocking the hot path.
+                            </p>
                         </div>
                         <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Federated "Hive Mind"</strong>
-                            <p className="text-gray-400 leading-relaxed">Nodes can exchange model weights to improve compression ratios on similar data types without transmitting the data itself.</p>
+                            <strong className="block text-neonBlue text-lg mb-2">Zero-Copy Residuals</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Unlike Arithmetic Coding, QRES writes residuals directly to the stream. If the prediction is high-accuracy, it uses unary prefix codes to store data with minimal bits.
+                            </p>
                         </div>
                         <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Edge-Native Core</strong>
-                            <p className="text-gray-400 leading-relaxed">Core logic is <code>no_std</code> compatible, capable of running on bare-metal embedded devices, with a hybrid WASM runtime.</p>
+                            <strong className="block text-neonBlue text-lg mb-2">Privacy-First Federation</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Nodes share <em>mathematical probability weights</em> (the "how"), not raw files (the "what"). Hospitals and banks can collaborate on efficiency without risking user privacy.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                {/* Architecture ASCII */}
+                {/* 4. Architecture ASCII */}
                 <section>
                     <h3 className="text-2xl font-bold text-white mb-6">System Architecture</h3>
                     <div className="bg-black p-6 rounded-lg font-mono text-[10px] md:text-sm text-neonPink leading-relaxed overflow-x-auto border border-white/10 shadow-[0_0_30px_rgba(255,0,255,0.1)]">
@@ -158,102 +158,95 @@ cargo build --release --bin qres_daemon
                     </div>
                 </section>
 
-                {/* Benchmarks & Use Cases */}
-                <div className="grid lg:grid-cols-2 gap-12">
-                    <section>
-                        <h3 className="text-xl font-bold text-white mb-6">Mini Benchmarks</h3>
-                        <div className="overflow-hidden rounded-lg border border-white/10">
-                            <table className="w-full text-left text-sm">
-                                <thead className="bg-white/5 text-gray-300">
-                                    <tr>
-                                        <th className="p-3">Dataset</th>
-                                        <th className="p-3">Ratio</th>
-                                        <th className="p-3">Speed</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-white/5 text-gray-400">
-                                    <tr>
-                                        <td className="p-3 text-white">Sensor Stream</td>
-                                        <td className="p-3 text-neonBlue">~0.15 (6.6x)</td>
-                                        <td className="p-3">300+ MB/s</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 text-white">Server Logs</td>
-                                        <td className="p-3 text-neonBlue">~0.19 (5.2x)</td>
-                                        <td className="p-3">200 MB/s</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 text-white">CSV Data</td>
-                                        <td className="p-3 text-neonBlue">~0.76 (1.3x)</td>
-                                        <td className="p-3">150 MB/s</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
+                {/* 5. Benchmarks (Fixed Mobile Scroll) */}
+                <section>
+                    <h3 className="text-xl font-bold text-white mb-6">Mini Benchmarks</h3>
+                    <div className="overflow-x-auto rounded-lg border border-white/10">
+                        <table className="w-full text-left text-sm min-w-max">
+                            <thead className="bg-white/5 text-gray-300">
+                                <tr>
+                                    <th className="p-3">Dataset</th>
+                                    <th className="p-3">Ratio</th>
+                                    <th className="p-3">Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-white/5 text-gray-400">
+                                <tr>
+                                    <td className="p-3 text-white">Sensor Stream</td>
+                                    <td className="p-3 text-neonBlue">~0.15 (6.6x)</td>
+                                    <td className="p-3">300+ MB/s</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-3 text-white">Server Logs</td>
+                                    <td className="p-3 text-neonBlue">~0.19 (5.2x)</td>
+                                    <td className="p-3">200 MB/s</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-3 text-white">CSV Data</td>
+                                    <td className="p-3 text-neonBlue">~0.76 (1.3x)</td>
+                                    <td className="p-3">150 MB/s</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-                    <section>
-                        <h3 className="text-xl font-bold text-white mb-6">When to Use</h3>
-                        <div className="space-y-4 text-sm">
-                            <div className="flex gap-3">
-                                <span className="text-green-400 text-lg">✅</span>
-                                <div>
-                                    <strong className="block text-white">IoT Telemetry</strong>
-                                    <span className="text-gray-500">Highly repetitive sensor logs</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-green-400 text-lg">✅</span>
-                                <div>
-                                    <strong className="block text-white">Edge Networks</strong>
-                                    <span className="text-gray-500">Where bandwidth is costly</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-red-400 text-lg">❌</span>
-                                <div>
-                                    <strong className="block text-white">High-Entropy Data</strong>
-                                    <span className="text-gray-500">Encrypted files, random noise</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-red-400 text-lg">❌</span>
-                                <div>
-                                    <strong className="block text-white">General Purpose</strong>
-                                    <span className="text-gray-500">If raw speed is priority (use LZ4)</span>
-                                </div>
+                {/* 6. Quickstart */}
+                <section className="bg-white/5 p-8 rounded-xl border border-white/10">
+                    <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                        <span>🚀</span> Quickstart
+                    </h3>
+                    <div className="space-y-6">
+                        <div>
+                            <p className="text-gray-400 mb-2 text-sm">1. Install Python Package</p>
+                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
+                                {`pip install qres
+# Compress a file
+python3 -c "import qres; print(f'Compressed: {len(qres.compress(open(\"README.md\", \"rb\").read()))} bytes')" `}
                             </div>
                         </div>
-                    </section>
-                </div>
+                        <div>
+                            <p className="text-gray-400 mb-2 text-sm">2. Build the Daemon (Rust)</p>
+                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
+                                {`cargo build --release --bin qres_daemon
+./target/release/qres_daemon start`}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                {/* Vision Section */}
+                {/* 7. Real-World Impact */}
                 <section className="border-t border-white/10 pt-12">
-                    <h3 className="text-3xl font-bold text-white mb-8">The Vision: <span className="text-neonBlue">Self-Optimizing Internet</span></h3>
+                    <h3 className="text-3xl font-bold text-white mb-8">Real-World Impact</h3>
 
-                    <div className="space-y-8">
-                        <div>
-                            <h4 className="text-xl font-bold text-white mb-2">The Problem: Data Obesity</h4>
-                            <p className="text-gray-400 leading-relaxed">
-                                The world generates 400 exabytes of data daily. We transmit the same repetitive signals (sine waves, sensor streams) billions of times, wasting energy and hindering efficient AI adaptation.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 className="text-xl font-bold text-white mb-2">The Solution: Bio-Mimetic Compression</h4>
-                            <p className="text-gray-400 leading-relaxed">
-                                QRES is a paradigm shift from "Storage" to "Intelligence." It acts as a neural memory cortex, storing only anomalies while predicting norms, mimicking synaptic plasticity for lifelong learning.
-                            </p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6 mt-8">
-                            <div className="bg-white/5 p-6 rounded-xl">
-                                <h5 className="font-bold text-neonPink mb-2">🧠 Brain-Like Robotics</h5>
-                                <p className="text-sm text-gray-400">Enables robots to learn flight patterns or behaviors from compressed telemetry without cloud dependency.</p>
+                    <div className="grid gap-8">
+                        <div className="flex gap-6">
+                            <div className="text-4xl">🤖</div>
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-2">Brain-Like Robotics</h4>
+                                <p className="text-gray-400 leading-relaxed">
+                                    QRES allows robots to learn from vast sensory streams with ultra-efficiency (~19% compression). This enables <strong>Onboard ML</strong>—drones learning flight patterns from compressed telemetry without needing a cloud connection.
+                                </p>
                             </div>
-                            <div className="bg-white/5 p-6 rounded-xl">
-                                <h5 className="font-bold text-neonPink mb-2">🏛️ Digital Library of Alexandria</h5>
-                                <p className="text-sm text-gray-400">Fixed-Point Determinism means a file compressed today will decompress bit-perfectly on the quantum computers of 2100.</p>
+                        </div>
+
+                        <div className="flex gap-6">
+                            <div className="text-4xl">🏛️</div>
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-2">The Digital Library of Alexandria</h4>
+                                <p className="text-gray-400 leading-relaxed">
+                                    Because of our <strong>Fixed-Point Determinism</strong>, a file compressed today will decompress bit-perfectly on the quantum computers of 2100. It makes QRES one of the few formats safe for long-term civilizational archival.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex gap-6">
+                            <div className="text-4xl">🌍</div>
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-2">The "Infinite" Sensor Network</h4>
+                                <p className="text-gray-400 leading-relaxed">
+                                    With superior ratios on periodic data, IoT devices can transmit 5x more fidelity. Think real-time climate monitoring in the arctic or long-lasting medical implants that evolve with the patient.
+                                </p>
                             </div>
                         </div>
                     </div>

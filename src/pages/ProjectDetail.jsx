@@ -61,7 +61,7 @@ export default function ProjectDetail() {
                 </div>
 
                 {/* Content Body */}
-                <div className="p-8 md:p-12">
+                <div className="p-5 md:p-12">
                     {project.details ? project.details : (
                         <p className="text-xl text-gray-300 leading-relaxed">{project.description}</p>
                     )}
