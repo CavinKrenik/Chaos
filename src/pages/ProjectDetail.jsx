@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS } from '../data/projects';
+import SEO from '../components/SEO';
 
 export default function ProjectDetail() {
     const { id } = useParams();
@@ -23,6 +24,11 @@ export default function ProjectDetail() {
 
     return (
         <div className="max-w-5xl mx-auto py-20 px-6">
+            <SEO
+                title={project.title}
+                description={project.description}
+                url={`/portfolio/${project.id}`}
+            />
             {/* Back Button */}
             <Link to="/portfolio" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>

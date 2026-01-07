@@ -1,9 +1,15 @@
 // src/pages/Contact.jsx
 import React from 'react';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   return (
     <section className="max-w-3xl mx-auto py-24 px-6 text-center">
+      <SEO
+        title="Contact"
+        description="Ready to start a project? Get in touch with Cavin Krenik for web development, design, and technical consulting."
+        url="/contact"
+      />
       <div className="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-12 shadow-[0_0_40px_rgba(0,0,0,0.5)] flex flex-col items-center">
 
         {/* Email Icon */}

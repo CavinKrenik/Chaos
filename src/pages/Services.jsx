@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 // 1. Reusing your Spotlight Card Logic for consistency
 function ServiceCard({ title, desc, tags, delay }) {
@@ -88,6 +89,11 @@ const SERVICES = [
 export default function Services() {
   return (
     <div className="max-w-7xl mx-auto py-20 px-6">
+      <SEO
+        title="Services"
+        description="Web app engineering, creative web design, and technical consulting. I bridge the gap between chaotic ideas and shipping code."
+        url="/services"
+      />
 
       {/* Header */}
       <div className="text-center mb-20">

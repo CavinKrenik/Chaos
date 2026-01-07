@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const SKILLS = [
     {
@@ -96,6 +97,11 @@ function SkillCard({ category, items, color, delay }) {
 export default function Bio() {
     return (
         <section className="max-w-7xl mx-auto py-20 px-6">
+            <SEO
+                title="About the Developer"
+                description="I turn chaos into clean, usable systems. Discover my background in commercial fishing, arts, and full-stack development."
+                url="/bio"
+            />
             {/* Hero Bio Card */}
             <div className="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-10 md:p-14 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-16 max-w-4xl mx-auto relative overflow-hidden">
 

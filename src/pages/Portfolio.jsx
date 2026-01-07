@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { PROJECTS } from '../data/projects';
+import SEO from '../components/SEO';
 
 // Spotlight Card Component
 function ProjectCard({ project, featured = false }) {
@@ -105,6 +106,11 @@ export default function Portfolio() {
 
   return (
     <div className="max-w-[1600px] mx-auto py-32 px-4 md:px-8">
+      <SEO
+        title="Projects"
+        description="A curated selection of AI, web, and creative coding projects exploring experimental ideas and real-world applications."
+        url="/portfolio"
+      />
       {/* Page Header */}
       <div className="mb-24 md:mb-32">
         <h1 className="text-[12vw] md:text-[8vw] font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-800 leading-[0.8]">
