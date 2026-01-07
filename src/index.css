@@ -1,27 +1,84 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/forms";
 
 @theme {
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-void: #030014;
+  --color-void-light: #0f172a;
+  --color-neon-cyan: #00FFFF;
+  --color-neon-pink: #FF00FF;
+
+  /* Alias for existing components */
   --color-neonBlue: #00FFFF;
   --color-neonPink: #FF00FF;
-  --color-dark: #000000;
-  
-  --animate-pulseSlow: pulse 10s infinite;
-  --animate-spinSlow: spin 10s linear infinite;
-  
-  --image-stars: url('/stars-bg.png');
+
+  --animate-pulse-slow: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Custom Utilities that can't be handled by simple theme values yet */
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  }
+
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  }
+}
+
+/* Base Styles */
 @layer base {
   body {
-    @apply bg-dark text-white font-sans;
+    font-family: var(--font-sans);
+    background-color: var(--color-void-light);
+    color: white;
+    background-image: radial-gradient(circle at 50% 0%, #030014 0%, #0f172a 100%);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Initial load fade-in prevention */
+  #root {
+    opacity: 1;
   }
 }
 
-@layer utilities {
-  .bg-stars {
-    background-image: url('/stars-bg.png');
-    background-size: cover;
-    background-repeat: repeat;
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #030014;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #334155;
 }
