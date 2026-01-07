@@ -93,7 +93,7 @@ export const PROJECTS = [
                 <section className="grid md:grid-cols-2 gap-8">
                     <div className="bg-white/5 p-8 rounded-xl border border-white/10">
                         <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
-                            <span className="text-2xl">⚠️</span> The Problem: Data Obesity
+                            The Problem: Data Obesity
                         </h4>
                         <p className="text-gray-400 leading-relaxed">
                             The world generates 400 exabytes of data daily. We transmit the same repetitive signals (sine waves, sensor streams) billions of times, wasting energy and hindering efficient AI adaptation.
@@ -101,7 +101,7 @@ export const PROJECTS = [
                     </div>
                     <div className="bg-white/5 p-8 rounded-xl border border-white/10">
                         <h4 className="text-xl font-bold text-neonBlue mb-4 flex items-center gap-2">
-                            <span className="text-2xl">🧬</span> The Solution: Bio-Mimetic
+                            The Solution: Bio-Mimetic
                         </h4>
                         <p className="text-gray-400 leading-relaxed">
                             QRES mimics synaptic plasticity. For a robot's sensor feed or a heartbeat monitor, it learns the structure dynamically, storing only the "surprise" (entropy) and predicting the rest.
@@ -158,43 +158,79 @@ export const PROJECTS = [
                     </div>
                 </section>
 
-                {/* 5. Benchmarks (Fixed Mobile Scroll) */}
-                <section>
-                    <h3 className="text-xl font-bold text-white mb-6">Mini Benchmarks</h3>
-                    <div className="overflow-x-auto rounded-lg border border-white/10">
-                        <table className="w-full text-left text-sm min-w-max">
-                            <thead className="bg-white/5 text-gray-300">
-                                <tr>
-                                    <th className="p-3">Dataset</th>
-                                    <th className="p-3">Ratio</th>
-                                    <th className="p-3">Speed</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/5 text-gray-400">
-                                <tr>
-                                    <td className="p-3 text-white">Sensor Stream</td>
-                                    <td className="p-3 text-neonBlue">~0.15 (6.6x)</td>
-                                    <td className="p-3">300+ MB/s</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-3 text-white">Server Logs</td>
-                                    <td className="p-3 text-neonBlue">~0.19 (5.2x)</td>
-                                    <td className="p-3">200 MB/s</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-3 text-white">CSV Data</td>
-                                    <td className="p-3 text-neonBlue">~0.76 (1.3x)</td>
-                                    <td className="p-3">150 MB/s</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+                {/* Benchmarks & Use Cases */}
+                <div className="grid lg:grid-cols-2 gap-12">
+                    <section>
+                        <h3 className="text-xl font-bold text-white mb-6">Mini Benchmarks</h3>
+                        <div className="overflow-x-auto rounded-lg border border-white/10">
+                            <table className="w-full text-left text-sm min-w-max">
+                                <thead className="bg-white/5 text-gray-300">
+                                    <tr>
+                                        <th className="p-3">Dataset</th>
+                                        <th className="p-3">Ratio</th>
+                                        <th className="p-3">Speed</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-gray-400">
+                                    <tr>
+                                        <td className="p-3 text-white">Sensor Stream</td>
+                                        <td className="p-3 text-neonBlue">~0.15 (6.6x)</td>
+                                        <td className="p-3">300+ MB/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-3 text-white">Server Logs</td>
+                                        <td className="p-3 text-neonBlue">~0.19 (5.2x)</td>
+                                        <td className="p-3">200 MB/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-3 text-white">CSV Data</td>
+                                        <td className="p-3 text-neonBlue">~0.76 (1.3x)</td>
+                                        <td className="p-3">150 MB/s</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-xl font-bold text-white mb-6">When to Use</h3>
+                        <div className="space-y-4 text-sm">
+                            <div className="flex gap-3">
+                                <span className="text-neonBlue text-lg font-bold">/</span>
+                                <div>
+                                    <strong className="block text-white">IoT Telemetry</strong>
+                                    <span className="text-gray-500">Highly repetitive sensor logs</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-neonBlue text-lg font-bold">/</span>
+                                <div>
+                                    <strong className="block text-white">Edge Networks</strong>
+                                    <span className="text-gray-500">Where bandwidth is costly</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-gray-600 text-lg font-bold">X</span>
+                                <div>
+                                    <strong className="block text-gray-400">High-Entropy Data</strong>
+                                    <span className="text-gray-600">Encrypted files, random noise</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-gray-600 text-lg font-bold">X</span>
+                                <div>
+                                    <strong className="block text-gray-400">General Purpose</strong>
+                                    <span className="text-gray-600">If raw speed is priority (use LZ4)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
                 {/* 6. Quickstart */}
                 <section className="bg-white/5 p-8 rounded-xl border border-white/10">
-                    <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                        <span>🚀</span> Quickstart
+                    <h3 className="text-2xl font-bold text-white mb-6">
+                        Quickstart
                     </h3>
                     <div className="space-y-6">
                         <div>
@@ -221,7 +257,6 @@ python3 -c "import qres; print(f'Compressed: {len(qres.compress(open(\"README.md
 
                     <div className="grid gap-8">
                         <div className="flex gap-6">
-                            <div className="text-4xl">🤖</div>
                             <div>
                                 <h4 className="text-xl font-bold text-white mb-2">Brain-Like Robotics</h4>
                                 <p className="text-gray-400 leading-relaxed">
@@ -231,7 +266,6 @@ python3 -c "import qres; print(f'Compressed: {len(qres.compress(open(\"README.md
                         </div>
 
                         <div className="flex gap-6">
-                            <div className="text-4xl">🏛️</div>
                             <div>
                                 <h4 className="text-xl font-bold text-white mb-2">The Digital Library of Alexandria</h4>
                                 <p className="text-gray-400 leading-relaxed">
@@ -241,7 +275,6 @@ python3 -c "import qres; print(f'Compressed: {len(qres.compress(open(\"README.md
                         </div>
 
                         <div className="flex gap-6">
-                            <div className="text-4xl">🌍</div>
                             <div>
                                 <h4 className="text-xl font-bold text-white mb-2">The "Infinite" Sensor Network</h4>
                                 <p className="text-gray-400 leading-relaxed">
