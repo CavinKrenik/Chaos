@@ -78,9 +78,15 @@ export default function App() {
         <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-900/20 rounded-full blur-[120px] z-[-1]" />
 
         {/* Brand Logo - Top Left */}
-        <div className="fixed top-8 left-8 z-40 mix-blend-difference hidden md:block">
-          <Link to="/" className="text-xl font-bold tracking-tighter hover:opacity-75 transition-opacity">
-            CHAOSTOCODE
+        <div className="fixed top-6 left-6 z-40 hidden md:block">
+          <Link
+            to="/"
+            className="flex items-center gap-2 px-5 py-2.5 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl hover:border-cyan-500/50 hover:bg-black/60 transition-all duration-300 group"
+          >
+            <div className="w-2 h-2 rounded-full bg-cyan-500 group-hover:animate-pulse shadow-[0_0_8px_rgba(0,255,255,0.6)]"></div>
+            <span className="text-sm font-bold tracking-widest text-gray-200 group-hover:text-white">
+              CHAOSTOCODE
+            </span>
           </Link>
         </div>
 
