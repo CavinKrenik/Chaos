@@ -1,4 +1,9 @@
 # React SPA routing fallback
+# Static file pass-throughs
+/sitemap.xml  /sitemap.xml  200
+/robots.txt   /robots.txt   200
+
+# React SPA routing fallback
 /*    /index.html   200
 
 # Optional: Redirect old or alternate paths
