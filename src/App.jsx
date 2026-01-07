@@ -11,40 +11,74 @@ import Contact from './pages/Contact';
 function NavBar() {
   const location = useLocation();
 
-  const navItems = [
-    { path: '/', label: 'HOME' },
-    { path: '/portfolio', label: 'PORTFOLIO' },
-    { path: '/services', label: 'SERVICES' },
-    { path: '/bio', label: 'BIO' },
-    { path: '/contact', label: 'CONTACT' },
+  const NAV_ITEMS = [
+    {
+      path: '/',
+      label: 'HOME',
+      icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    },
+    {
+      path: '/portfolio',
+      label: 'PORTFOLIO',
+      icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+    },
+    {
+      path: '/services',
+      label: 'SERVICES',
+      icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+    },
+    {
+      path: '/bio',
+      label: 'BIO',
+      icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+    },
+    {
+      path: '/contact',
+      label: 'CONTACT',
+      icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+    },
   ];
 
   return (
-    <div className="fixed bottom-8 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      <nav className="pointer-events-auto bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl px-2 py-2 md:px-3 md:py-3 shadow-2xl flex items-center gap-1 md:gap-2">
-        {navItems.map((item) => {
+    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-md md:w-auto md:max-w-none">
+      <div className="flex items-center justify-between md:justify-center md:gap-8 px-2 py-3 md:px-8 md:py-4 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
+        {NAV_ITEMS.map((item) => {
           const isActive = location.pathname === item.path || (item.path !== '/' && location.pathname.startsWith(item.path));
           return (
             <Link
               key={item.path}
               to={item.path}
-              className="relative px-4 py-2 md:px-6 md:py-3 rounded-xl text-xs md:text-sm font-bold tracking-wider transition-colors duration-300"
+              className={`relative px-3 py-2 md:px-4 md:py-2 rounded-full transition-all duration-300 group flex flex-col md:flex-row items-center gap-1 md:gap-2 ${isActive ? 'text-white' : 'text-slate-500 hover:text-slate-300'
+                }`}
             >
-              <span className={`relative z-10 ${isActive ? 'text-black' : 'text-slate-400 hover:text-white'}`}>
-                {item.label}
-              </span>
+              {/* Active Background Pill */}
               {isActive && (
                 <motion.div
                   layoutId="nav-pill"
-                  className="absolute inset-0 bg-cyan-400 rounded-xl"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
+              )}
+
+              {/* Icon - Always visible, slightly larger on mobile for touch targets */}
+              <span className="text-xl md:text-lg relative z-10">
+                {item.icon}
+              </span>
+
+              {/* Label - Hidden on very small screens (using sm:block instead of xs:block), Visible on slightly larger mobile & Desktop */}
+              <span className="text-[10px] md:text-sm font-medium tracking-wide hidden sm:block relative z-10">
+                {item.label}
+              </span>
+
+              {/* Mobile Active Dot (Replacing label if space is tight) */}
+              {isActive && (
+                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-cyan-500 rounded-full md:hidden"></span>
               )}
             </Link>
           );
         })}
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 
