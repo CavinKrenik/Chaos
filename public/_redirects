@@ -1,15 +1,2 @@
 # React SPA routing fallback
-# Static file pass-throughs
-/sitemap.xml  /sitemap.xml  200
-/robots.txt   /robots.txt   200
-
-# React SPA routing fallback
 /*    /index.html   200
-
-# Optional: Redirect old or alternate paths
-/about-us     /about      301
-/contact-me   /contact    301
-/projects     /portfolio  301
-
-# Optional: Redirect from external success pages
-/success      /thank-you  301
