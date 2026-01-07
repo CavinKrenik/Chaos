@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import ProjectDetail from './pages/ProjectDetail';
 import Services from './pages/Services';
 import Bio from './pages/Bio';
 import Contact from './pages/Contact';
@@ -28,6 +29,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio/:id" element={<ProjectDetail />} />
               <Route path="/services" element={<Services />} />
               <Route path="/bio" element={<Bio />} />
               <Route path="/contact" element={<Contact />} />
