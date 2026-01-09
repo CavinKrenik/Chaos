@@ -67,8 +67,8 @@ export const PROJECTS = [
     },
     {
         id: 'qres',
-        title: 'TensorSwarm: Secure Federated Learning for Edge IoT',
-        description: 'A published research system combining spiking neural networks with swarm intelligence for privacy-preserving federated learning on edge devices. 22:1 compression with Byzantine tolerance.',
+        title: 'QRES',
+        description: 'Published research combining SNNs and swarm intelligence for privacy-preserving federated learning on edge IoT devices—22:1 compression, Byzantine-tolerant.',
         tech: ['Rust', 'Python', 'Azure VMs', 'SNNs', 'Differential Privacy', 'Zero-Knowledge Proofs'],
         live: 'https://doi.org/10.5281/zenodo.18193906',
         repo: 'https://github.com/CavinKrenik/QRES',
