@@ -67,221 +67,323 @@ export const PROJECTS = [
     },
     {
         id: 'qres',
-        title: 'QRES: Quantum-Relational Encoding System',
-        description: 'A neural, deterministic compression engine for the IoT and Edge Computing era, leveraging SNNs and a federated P2P architecture.',
-        tech: ['Rust', 'Python', 'WebAssembly', 'SNNs', 'P2P', 'No_Std'],
-        live: null,
+        title: 'TensorSwarm: Secure Federated Learning for Edge IoT',
+        description: 'A published research system combining spiking neural networks with swarm intelligence for privacy-preserving federated learning on edge devices. 22:1 compression with Byzantine tolerance.',
+        tech: ['Rust', 'Python', 'Azure VMs', 'SNNs', 'Differential Privacy', 'Zero-Knowledge Proofs'],
+        live: 'https://doi.org/10.5281/zenodo.18193906',
         repo: 'https://github.com/CavinKrenik/QRES',
         type: 'featured',
         featured: true,
         details: (
             <div className="space-y-16 text-left">
-                {/* 1. Hero / Abstract */}
-                <section>
-                    <h3 className="text-3xl font-bold text-neonBlue mb-6">The "Singularity Engine"</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                        QRES is a paradigm shift from "Storage" to "Intelligence." It acts as a neural memory cortex, storing only anomalies while predicting norms. By leveraging Spiking Neural Networks (SNNs) and a federated P2P architecture, it allows IoT swarms to share "compression intelligence" without ever sharing raw data.
+                {/* 1. Publication Hero */}
+                <section className="bg-gradient-to-r from-neonBlue/10 to-neonPink/10 p-8 rounded-xl border border-white/10">
+                    <div className="flex flex-wrap items-center gap-4 mb-6">
+                        <span className="bg-neonBlue text-black px-3 py-1 rounded font-bold text-sm uppercase tracking-wide">
+                            Published Research
+                        </span>
+                        <a href="https://doi.org/10.5281/zenodo.18193906" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                            <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18193906.svg" alt="DOI: 10.5281/zenodo.18193906" />
+                        </a>
+                        <a href="https://orcid.org/0009-0008-9183-1278" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                            <img src="https://img.shields.io/badge/ORCID-0009--0008--9183--1278-green.svg" alt="ORCID" />
+                        </a>
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-4">
+                        TensorSwarm: Biologically-Inspired Secure Federated Learning for Edge IoT Devices
+                    </h3>
+                    <p className="text-gray-400 mb-4">
+                        <strong className="text-white">Cavin Krenik</strong> — Olympic College | Published January 2026
                     </p>
-                    <div className="flex flex-wrap gap-4 text-sm font-mono text-neonPink">
-                        <span className="bg-white/5 px-3 py-1 rounded border border-white/10">v10.5 (Hybrid Era)</span>
-                        <span className="bg-white/5 px-3 py-1 rounded border border-white/10">License: Apache 2.0</span>
-                        <span className="bg-white/5 px-3 py-1 rounded border border-white/10">Build: Passing</span>
+                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
+                        <span>📄 14 pages</span>
+                        <span>📊 5 figures</span>
+                        <span>🔗 14+ references</span>
+                        <span>🏷️ v15.2-paper</span>
                     </div>
                 </section>
 
-                {/* 2. The Problem & Solution */}
-                <section className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
-                            The Problem: Data Obesity
-                        </h4>
-                        <p className="text-gray-400 leading-relaxed">
-                            The world generates 400 exabytes of data daily. We transmit the same repetitive signals (sine waves, sensor streams) billions of times, wasting energy and hindering efficient AI adaptation.
-                        </p>
+                {/* 2. Key Results Stats */}
+                <section className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="bg-black/40 p-6 rounded-xl border border-neonBlue/30 text-center">
+                        <span className="block text-4xl font-bold text-neonBlue mb-2">22:1</span>
+                        <span className="text-gray-400 text-sm">Compression Ratio</span>
                     </div>
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h4 className="text-xl font-bold text-neonBlue mb-4 flex items-center gap-2">
-                            The Solution: Bio-Mimetic
-                        </h4>
-                        <p className="text-gray-400 leading-relaxed">
-                            QRES mimics synaptic plasticity. For a robot's sensor feed or a heartbeat monitor, it learns the structure dynamically, storing only the "surprise" (entropy) and predicting the rest.
-                        </p>
+                    <div className="bg-black/40 p-6 rounded-xl border border-neonPink/30 text-center">
+                        <span className="block text-4xl font-bold text-neonPink mb-2">20-30%</span>
+                        <span className="text-gray-400 text-sm">Privacy Overhead</span>
+                    </div>
+                    <div className="bg-black/40 p-6 rounded-xl border border-neonBlue/30 text-center">
+                        <span className="block text-4xl font-bold text-neonBlue mb-2">49%</span>
+                        <span className="text-gray-400 text-sm">Byzantine Tolerance</span>
+                    </div>
+                    <div className="bg-black/40 p-6 rounded-xl border border-neonPink/30 text-center">
+                        <span className="block text-4xl font-bold text-neonPink mb-2">100</span>
+                        <span className="text-gray-400 text-sm">Nodes Validated</span>
                     </div>
                 </section>
 
-                {/* 3. Technical Deep Dive */}
+                {/* 3. Abstract */}
                 <section>
-                    <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-neonBlue pl-4">Under the Hood</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Fixed-Point Determinism</strong>
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                                Built on <strong>Q16.16 fixed-point arithmetic</strong>. This guarantees bit-perfect reproducibility across x86, ARM, RISC-V, and WASM targets, preventing "Butterfly Effect" drift in neural weights.
-                            </p>
-                        </div>
-                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">The "Living Brain"</strong>
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                                An autonomous background daemon that manages an ensemble of predictors (Linear, Spectral, SNNs). It optimizes the codec's weights without blocking the hot path.
-                            </p>
-                        </div>
-                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Zero-Copy Residuals</strong>
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                                Unlike Arithmetic Coding, QRES writes residuals directly to the stream. If the prediction is high-accuracy, it uses unary prefix codes to store data with minimal bits.
-                            </p>
-                        </div>
-                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
-                            <strong className="block text-neonBlue text-lg mb-2">Privacy-First Federation</strong>
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                                Nodes share <em>mathematical probability weights</em> (the "how"), not raw files (the "what"). Hospitals and banks can collaborate on efficiency without risking user privacy.
-                            </p>
-                        </div>
-                    </div>
+                    <h3 className="text-2xl font-bold text-neonBlue mb-4">Abstract</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                        Federated learning enables collaborative model training across distributed devices while keeping raw data local. However, constrained edge devices in IoT networks face severe limitations in bandwidth, memory, and computational resources that restrict the applicability of standard federated learning approaches. We present <strong className="text-white">TensorSwarm</strong>, a compression-first federated learning system that combines biologically-inspired spiking neural networks with swarm intelligence for privacy-preserving model training on edge IoT devices.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed mt-4">
+                        Our system achieves <strong className="text-neonBlue">22:1 average compression</strong> on IoT time-series data while maintaining 20-30% overhead for a complete privacy stack including differential privacy, secure aggregation via ECDH pairwise masking, and zero-knowledge proofs using Pedersen commitments. Through empirical evaluation on Azure VM clusters scaling from 10 to 100 nodes, we demonstrate convergence within 13 rounds, Byzantine fault tolerance up to 49% malicious participants via Krum aggregation, and regime change recovery in 3-4 rounds on average.
+                    </p>
                 </section>
 
-                {/* 4. Architecture ASCII */}
+                {/* 4. Key Contributions */}
                 <section>
-                    <h3 className="text-2xl font-bold text-white mb-6">System Architecture</h3>
-                    <div className="bg-black p-6 rounded-lg font-mono text-[10px] md:text-sm text-neonPink leading-relaxed overflow-x-auto border border-white/10 shadow-[0_0_30px_rgba(255,0,255,0.1)]">
-                        <pre>{`
-┌─────────────────────────────────────────────────────────────┐
-│                    QRES Architecture                        │
-├─────────────────────────────────────────────────────────────┤
-│  Input Data  →  [SNN Predictor]  →  [TNC Fusion]  →  Output │
-│       ↑              ↓                   ↓             ↓    │
-│       └── [MetaBrain RL Agent] ←─ [Mixer Weights] ←────┘    │
-│                      ↓                                      │
-│              [P2P Hive Mind]  ←→  [Other Nodes]             │
-└─────────────────────────────────────────────────────────────┘
-                        `}</pre>
+                    <h3 className="text-2xl font-bold text-white mb-6 border-l-4 border-neonBlue pl-4">Key Contributions</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
+                            <strong className="block text-neonBlue text-lg mb-2">Fixed-Point SNN Ensemble</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Deterministic temporal prediction using <strong>Q16.16 fixed-point arithmetic</strong>, ensuring bit-perfect reproducibility across heterogeneous edge hardware (ARM, RISC-V, WASM).
+                            </p>
+                        </div>
+                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
+                            <strong className="block text-neonBlue text-lg mb-2">Complete Privacy Stack</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Layered privacy with <strong>Differential Privacy (ε=1.0)</strong>, ECDH-based Secure Aggregation, and Zero-Knowledge Proofs via Pedersen commitments for verifiable contributions.
+                            </p>
+                        </div>
+                        <div className="bg-black/40 p-6 rounded-xl border border-white/5 hover:border-neonBlue/30 transition-colors">
+                            <strong className="block text-neonBlue text-lg mb-2">Scalable Evaluation</strong>
+                            <p className="text-gray-400 leading-relaxed text-sm">
+                                Empirical validation on <strong>Azure VM clusters</strong> from 10-100 nodes, demonstrating sub-linear communication overhead and Byzantine resilience via Krum aggregation.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
-                {/* Benchmarks & Use Cases */}
-                <div className="grid lg:grid-cols-2 gap-12">
-                    <section>
-                        <h3 className="text-xl font-bold text-white mb-6">Mini Benchmarks</h3>
+                {/* 5. Experimental Evaluation */}
+                <section>
+                    <h3 className="text-2xl font-bold text-white mb-6">Experimental Evaluation</h3>
+
+                    {/* Privacy Overhead Table */}
+                    <div className="mb-8">
+                        <h4 className="text-lg font-semibold text-neonPink mb-4">Privacy Overhead Analysis</h4>
                         <div className="overflow-x-auto rounded-lg border border-white/10">
                             <table className="w-full text-left text-sm min-w-max">
                                 <thead className="bg-white/5 text-gray-300">
                                     <tr>
-                                        <th className="p-3">Dataset</th>
-                                        <th className="p-3">Ratio</th>
-                                        <th className="p-3">Speed</th>
+                                        <th className="p-3">Configuration</th>
+                                        <th className="p-3">Latency (ms)</th>
+                                        <th className="p-3">Memory (MB)</th>
+                                        <th className="p-3">Overhead</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-white/5 text-gray-400">
                                     <tr>
-                                        <td className="p-3 text-white">Sensor Stream</td>
-                                        <td className="p-3 text-neonBlue">~0.15 (6.6x)</td>
-                                        <td className="p-3">300+ MB/s</td>
+                                        <td className="p-3 text-white">Baseline (No Privacy)</td>
+                                        <td className="p-3">45</td>
+                                        <td className="p-3">12</td>
+                                        <td className="p-3 text-gray-500">—</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 text-white">Server Logs</td>
-                                        <td className="p-3 text-neonBlue">~0.19 (5.2x)</td>
-                                        <td className="p-3">200 MB/s</td>
+                                        <td className="p-3 text-white">DP Only</td>
+                                        <td className="p-3">52</td>
+                                        <td className="p-3">14</td>
+                                        <td className="p-3 text-neonBlue">+15%</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 text-white">CSV Data</td>
-                                        <td className="p-3 text-neonBlue">~0.76 (1.3x)</td>
-                                        <td className="p-3">150 MB/s</td>
+                                        <td className="p-3 text-white">Secure Aggregation</td>
+                                        <td className="p-3">58</td>
+                                        <td className="p-3">18</td>
+                                        <td className="p-3 text-neonBlue">+29%</td>
+                                    </tr>
+                                    <tr className="bg-neonBlue/5">
+                                        <td className="p-3 text-white font-semibold">Full Stack (DP + SA + ZK)</td>
+                                        <td className="p-3">61</td>
+                                        <td className="p-3">22</td>
+                                        <td className="p-3 text-neonPink font-bold">+35%</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h3 className="text-xl font-bold text-white mb-6">When to Use</h3>
-                        <div className="space-y-4 text-sm">
-                            <div className="flex gap-3">
-                                <span className="text-neonBlue text-lg font-bold">/</span>
-                                <div>
-                                    <strong className="block text-white">IoT Telemetry</strong>
-                                    <span className="text-gray-500">Highly repetitive sensor logs</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-neonBlue text-lg font-bold">/</span>
-                                <div>
-                                    <strong className="block text-white">Edge Networks</strong>
-                                    <span className="text-gray-500">Where bandwidth is costly</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-gray-600 text-lg font-bold">X</span>
-                                <div>
-                                    <strong className="block text-gray-400">High-Entropy Data</strong>
-                                    <span className="text-gray-600">Encrypted files, random noise</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <span className="text-gray-600 text-lg font-bold">X</span>
-                                <div>
-                                    <strong className="block text-gray-400">General Purpose</strong>
-                                    <span className="text-gray-600">If raw speed is priority (use LZ4)</span>
-                                </div>
-                            </div>
+                    {/* Convergence Comparison */}
+                    <div className="mb-8">
+                        <h4 className="text-lg font-semibold text-neonPink mb-4">Convergence Comparison (vs. Baselines)</h4>
+                        <div className="overflow-x-auto rounded-lg border border-white/10">
+                            <table className="w-full text-left text-sm min-w-max">
+                                <thead className="bg-white/5 text-gray-300">
+                                    <tr>
+                                        <th className="p-3">Algorithm</th>
+                                        <th className="p-3">Rounds to Converge</th>
+                                        <th className="p-3">Final Accuracy</th>
+                                        <th className="p-3">Communication</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-gray-400">
+                                    <tr>
+                                        <td className="p-3 text-white">FedAvg</td>
+                                        <td className="p-3">12</td>
+                                        <td className="p-3">91.2%</td>
+                                        <td className="p-3">1.0× (baseline)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-3 text-white">FedProx</td>
+                                        <td className="p-3">10</td>
+                                        <td className="p-3">92.8%</td>
+                                        <td className="p-3">1.0×</td>
+                                    </tr>
+                                    <tr className="bg-neonBlue/5">
+                                        <td className="p-3 text-white font-semibold">TensorSwarm</td>
+                                        <td className="p-3">13</td>
+                                        <td className="p-3">90.5%</td>
+                                        <td className="p-3 text-neonBlue font-bold">0.045× (22:1)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </section>
-                </div>
+                    </div>
 
-                {/* 6. Quickstart */}
-                <section className="bg-white/5 p-8 rounded-xl border border-white/10">
-                    <h3 className="text-2xl font-bold text-white mb-6">
-                        Quickstart
-                    </h3>
-                    <div className="space-y-6">
-                        <div>
-                            <p className="text-gray-400 mb-2 text-sm">1. Install Python Package</p>
-                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
-                                {`pip install qres
-# Compress a file
-python3 -c "import qres; print(f'Compressed: {len(qres.compress(open(\"README.md\", \"rb\").read()))} bytes')" `}
-                            </div>
-                        </div>
-                        <div>
-                            <p className="text-gray-400 mb-2 text-sm">2. Build the Daemon (Rust)</p>
-                            <div className="bg-black p-4 rounded-lg border border-white/10 font-mono text-xs md:text-sm text-cyan-300 overflow-x-auto">
-                                {`cargo build --release --bin qres_daemon
-./target/release/qres_daemon start`}
-                            </div>
+                    {/* Scalability Analysis */}
+                    <div>
+                        <h4 className="text-lg font-semibold text-neonPink mb-4">Scalability Analysis (Azure VMs)</h4>
+                        <div className="overflow-x-auto rounded-lg border border-white/10">
+                            <table className="w-full text-left text-sm min-w-max">
+                                <thead className="bg-white/5 text-gray-300">
+                                    <tr>
+                                        <th className="p-3">Nodes</th>
+                                        <th className="p-3">Round Time</th>
+                                        <th className="p-3">Aggregation</th>
+                                        <th className="p-3">Throughput</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-gray-400">
+                                    <tr>
+                                        <td className="p-3 text-white">10</td>
+                                        <td className="p-3">1.2s</td>
+                                        <td className="p-3">180ms</td>
+                                        <td className="p-3">8.3 rounds/min</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-3 text-white">50</td>
+                                        <td className="p-3">2.8s</td>
+                                        <td className="p-3">420ms</td>
+                                        <td className="p-3">4.3 rounds/min</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-3 text-white">100</td>
+                                        <td className="p-3">4.5s</td>
+                                        <td className="p-3">890ms</td>
+                                        <td className="p-3 text-neonBlue">2.7 rounds/min</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
 
-                {/* 7. Real-World Impact */}
-                <section className="border-t border-white/10 pt-12">
-                    <h3 className="text-3xl font-bold text-white mb-8">Real-World Impact</h3>
-
-                    <div className="grid gap-8">
-                        <div className="flex gap-6">
-                            <div>
-                                <h4 className="text-xl font-bold text-white mb-2">Brain-Like Robotics</h4>
-                                <p className="text-gray-400 leading-relaxed">
-                                    QRES allows robots to learn from vast sensory streams with ultra-efficiency (~19% compression). This enables <strong>Onboard ML</strong>—drones learning flight patterns from compressed telemetry without needing a cloud connection.
-                                </p>
-                            </div>
+                {/* 6. Technical Stack */}
+                <section>
+                    <h3 className="text-2xl font-bold text-white mb-6">Technical Stack (v15.2)</h3>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                            <span className="block text-neonBlue font-bold mb-1">Core</span>
+                            <span className="text-gray-400 text-sm">Rust (no_std compatible)</span>
                         </div>
-
-                        <div className="flex gap-6">
-                            <div>
-                                <h4 className="text-xl font-bold text-white mb-2">The Digital Library of Alexandria</h4>
-                                <p className="text-gray-400 leading-relaxed">
-                                    Because of our <strong>Fixed-Point Determinism</strong>, a file compressed today will decompress bit-perfectly on the quantum computers of 2100. It makes QRES one of the few formats safe for long-term civilizational archival.
-                                </p>
-                            </div>
+                        <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                            <span className="block text-neonBlue font-bold mb-1">Bindings</span>
+                            <span className="text-gray-400 text-sm">Python + WebAssembly</span>
                         </div>
-
-                        <div className="flex gap-6">
-                            <div>
-                                <h4 className="text-xl font-bold text-white mb-2">The "Infinite" Sensor Network</h4>
-                                <p className="text-gray-400 leading-relaxed">
-                                    With superior ratios on periodic data, IoT devices can transmit 5x more fidelity. Think real-time climate monitoring in the arctic or long-lasting medical implants that evolve with the patient.
-                                </p>
-                            </div>
+                        <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                            <span className="block text-neonBlue font-bold mb-1">Infrastructure</span>
+                            <span className="text-gray-400 text-sm">Azure VM Clusters</span>
                         </div>
+                        <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                            <span className="block text-neonBlue font-bold mb-1">Arithmetic</span>
+                            <span className="text-gray-400 text-sm">Q16.16 Fixed-Point</span>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 7. Citation */}
+                <section className="bg-black/60 p-6 rounded-xl border border-white/10">
+                    <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-xl font-bold text-white">Citation</h3>
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText(`@software{krenik2026tensorswarm,
+  author    = {Krenik, Cavin},
+  title     = {{TensorSwarm: Biologically-Inspired Secure 
+                Federated Learning for Edge IoT Devices}},
+  month     = jan,
+  year      = 2026,
+  publisher = {Zenodo},
+  version   = {v15.2-paper},
+  doi       = {10.5281/zenodo.18193906},
+  url       = {https://doi.org/10.5281/zenodo.18193906}
+}`);
+                                const btn = document.activeElement;
+                                const originalText = btn.textContent;
+                                btn.textContent = 'Copied!';
+                                setTimeout(() => btn.textContent = originalText, 2000);
+                            }}
+                            className="bg-neonBlue hover:bg-neonBlue/80 text-black px-4 py-2 rounded font-semibold text-sm transition-colors"
+                        >
+                            Copy Citation
+                        </button>
+                    </div>
+                    <pre className="text-xs text-cyan-300 overflow-x-auto font-mono leading-relaxed">{`@software{krenik2026tensorswarm,
+  author    = {Krenik, Cavin},
+  title     = {{TensorSwarm: Biologically-Inspired Secure 
+                Federated Learning for Edge IoT Devices}},
+  month     = jan,
+  year      = 2026,
+  publisher = {Zenodo},
+  version   = {v15.2-paper},
+  doi       = {10.5281/zenodo.18193906},
+  url       = {https://doi.org/10.5281/zenodo.18193906}
+}`}</pre>
+                </section>
+
+                {/* 8. Links & Resources */}
+                <section>
+                    <h3 className="text-2xl font-bold text-white mb-6">Links & Resources</h3>
+                    <div className="flex flex-wrap gap-4">
+                        <a
+                            href="https://github.com/CavinKrenik/QRES/blob/main/paper/TensorSwarm__Biologically_Inspired_Secure_Federated_Learning_for_Edge_IoT_Devices.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
+                        >
+                            <span className="text-lg">📄</span>
+                            <span className="text-white font-medium">View Paper PDF</span>
+                        </a>
+                        <a
+                            href="https://doi.org/10.5281/zenodo.18193906"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
+                        >
+                            <span className="text-lg">🔗</span>
+                            <span className="text-white font-medium">View on Zenodo</span>
+                        </a>
+                        <a
+                            href="https://orcid.org/0009-0008-9183-1278"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
+                        >
+                            <span className="text-lg">🎓</span>
+                            <span className="text-white font-medium">ORCID Profile</span>
+                        </a>
+                        <a
+                            href="https://github.com/CavinKrenik/QRES"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
+                        >
+                            <span className="text-lg">💻</span>
+                            <span className="text-white font-medium">GitHub Repository</span>
+                        </a>
                     </div>
                 </section>
             </div>
