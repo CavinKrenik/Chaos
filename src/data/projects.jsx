@@ -90,13 +90,13 @@ export const PROJECTS = [
                         </a>
                     </div>
                     <h3 className="text-3xl font-bold text-white mb-4">
-                        TensorSwarm: Biologically-Inspired Secure Federated Learning for Edge IoT Devices
+                        QRES: Biologically-Inspired Secure Federated Learning for Edge IoT Devices
                     </h3>
                     <p className="text-gray-400 mb-4">
                         <strong className="text-white">Cavin Krenik</strong> — Olympic College | Published January 2026
                     </p>
                     <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
-                        <span>📄 14 pages</span>
+                        <span>📄 5 pages</span>
                         <span>📊 5 figures</span>
                         <span>🔗 14+ references</span>
                         <span>🏷️ v15.2-paper</span>
