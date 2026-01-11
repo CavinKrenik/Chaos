@@ -15,7 +15,7 @@ const SKILLS = [
     },
     {
         category: 'Backend & Integrations',
-        items: ['Node.js', 'Flask', 'PostgreSQL', 'Supabase', 'Stripe', 'Lemon Squeezy', 'Resend'],
+        items: ['Node.js', 'Flask', 'PostgreSQL', 'Supabase', 'Stripe', 'Resend'],
         color: 'text-neonBlue',
     },
     {

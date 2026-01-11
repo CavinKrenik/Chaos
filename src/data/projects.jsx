@@ -5,7 +5,7 @@ export const PROJECTS = [
         id: 'dataghost',
         title: 'DataGhost',
         description: 'The simplest, most transparent way to disappear from data brokers. We blast 70+ opt-out requests and CC you on every single email.',
-        tech: ['Next.js 14', 'Supabase', 'Playwright', 'Resend', 'Lemon Squeezy'],
+        tech: ['Next.js 14', 'Supabase', 'Playwright', 'Resend', 'Stripe'],
         live: 'https://dataghost.me',
         repo: null,
         type: 'featured',
@@ -24,7 +24,7 @@ export const PROJECTS = [
                     <ul className="space-y-4 text-gray-300">
                         <li className="flex gap-3">
                             <span className="text-neonBlue font-bold">1.</span>
-                            <span><strong>User Pays:</strong> $49 via Lemon Squeezy (one-time).</span>
+                            <span><strong>User Pays:</strong> $49 via Stripe (one-time).</span>
                         </li>
                         <li className="flex gap-3">
                             <span className="text-neonBlue font-bold">2.</span>
