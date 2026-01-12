@@ -70,7 +70,7 @@ export const PROJECTS = [
         title: 'QRES',
         description: 'Published research combining SNNs and swarm intelligence for privacy-preserving federated learning on edge IoT devices—22:1 compression, Byzantine-tolerant.',
         tech: ['Rust', 'Python', 'Azure VMs', 'SNNs', 'Differential Privacy', 'Zero-Knowledge Proofs'],
-        live: 'https://doi.org/10.5281/zenodo.18193906',
+        live: 'https://zenodo.org/records/18216283',
         repo: 'https://github.com/CavinKrenik/QRES',
         type: 'featured',
         featured: true,
@@ -82,8 +82,8 @@ export const PROJECTS = [
                         <span className="bg-neonBlue text-black px-3 py-1 rounded font-bold text-sm uppercase tracking-wide">
                             Published Research
                         </span>
-                        <a href="https://doi.org/10.5281/zenodo.18193906" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                            <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18193906.svg" alt="DOI: 10.5281/zenodo.18193906" />
+                        <a href="https://zenodo.org/records/18216283" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                            <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18216283.svg" alt="DOI: 10.5281/zenodo.18216283" />
                         </a>
                         <a href="https://orcid.org/0009-0008-9183-1278" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                             <img src="https://img.shields.io/badge/ORCID-0009--0008--9183--1278-green.svg" alt="ORCID" />
@@ -318,8 +318,8 @@ export const PROJECTS = [
   year      = 2026,
   publisher = {Zenodo},
   version   = {v15.2-paper},
-  doi       = {10.5281/zenodo.18193906},
-  url       = {https://doi.org/10.5281/zenodo.18193906}
+  doi       = {10.5281/zenodo.18216283},
+  url       = {https://zenodo.org/records/18216283}
 }`);
                                 const btn = document.activeElement;
                                 const originalText = btn.textContent;
@@ -339,8 +339,8 @@ export const PROJECTS = [
   year      = 2026,
   publisher = {Zenodo},
   version   = {v15.2-paper},
-  doi       = {10.5281/zenodo.18193906},
-  url       = {https://doi.org/10.5281/zenodo.18193906}
+  doi       = {10.5281/zenodo.18216283},
+  url       = {https://zenodo.org/records/18216283}
 }`}</pre>
                 </section>
 
@@ -358,7 +358,7 @@ export const PROJECTS = [
                             <span className="text-white font-medium">View Paper PDF</span>
                         </a>
                         <a
-                            href="https://doi.org/10.5281/zenodo.18193906"
+                            href="https://zenodo.org/records/18216283"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
