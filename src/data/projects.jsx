@@ -243,7 +243,7 @@ export const PROJECTS = [
                     <h3 className="text-2xl font-bold text-white mb-6">Links & Resources</h3>
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="https://github.com/CavinKrenik/QRES/blob/main/paper/QRES__Biologically_Inspired_Secure_Federated_Learning_for_Edge_IoT_Devices.pdf"
+                            href="https://github.com/CavinKrenik/QRES/blob/main/paper/paper.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neonBlue/50 px-5 py-3 rounded-lg transition-colors"
